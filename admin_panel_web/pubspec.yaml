@@ -62,6 +62,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
+  # Keep assets optional; .env may not exist in CI. Flutter tolerates missing
+  # assets entries at runtime so long as they're not loaded as images. dotenv
+  # loading is guarded in code. If you do not plan to use .env, you can remove it.
   assets:
     - .env
     - assets/
