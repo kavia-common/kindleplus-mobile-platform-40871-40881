@@ -1,18 +1,17 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:admin_panel_web/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
+  testWidgets('Header shows Bookztron brand', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
-
-    expect(find.text('admin_panel_web App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
+    await tester.pumpAndSettle();
+    expect(find.text('Bookztron'), findsWidgets);
   });
 
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
+  testWidgets('Home shows Genres and New Arrivals sections', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
-
-    expect(find.text('admin_panel_web'), findsOneWidget);
+    await tester.pumpAndSettle();
+    expect(find.text('Genres'), findsOneWidget);
+    expect(find.text('New Arrivals'), findsOneWidget);
   });
 }
