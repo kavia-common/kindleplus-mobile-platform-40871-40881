@@ -1,0 +1,1 @@
+ /home/kavia/workspace/code-generation/kindleplus-mobile-platform-40871-40881/admin_panel_web/.dart_tool/flutter_build/c09676f1b766a653be185bd18931ab6e/native_assets.json: 
